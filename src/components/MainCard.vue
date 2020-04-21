@@ -1,10 +1,11 @@
 <template>
   <div class="MainCard">
+    <Arctail/>
     <div class="age">
       25
     </div>
     <div class="name">
-      홍길동
+      최지연
     </div>
     <div class="MainCardBottom">
     </div>
@@ -12,13 +13,19 @@
 </template>
 
 <script>
+import Arctail from "./MainCard/Arctail.vue"
 export default {
-    name:"MainCard"
+    name:"MainCard",
+    components:{
+      Arctail
+    }
 }
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Raleway:wght@700&display=swap');
 .MainCard{
+  
     position: absolute;
     width:80%;
     height:60%;
@@ -29,20 +36,22 @@ export default {
     background:white;
     overflow: hidden;
     .age{
-      font-size:128px;
+      font-family: 'Raleway', sans-serif;
+      font-size:160px;
       color:var(--primary);
       font-weight:bold;
       position: absolute;
       left:-18px;
-      top:-18px;
+      top:-60px;
     }
     .name{
-      font-weight:bold;
+      font-family: 'Do Hyeon', sans-serif;
+      // font-weight:bold;
       font-size:48px;
       position: absolute;
       top:60px;
       left:24px;
-      color:rgb(155, 60, 214);
+      color:rgb(100, 92, 105);
     }
     .MainCardBottom{
       height:35%;

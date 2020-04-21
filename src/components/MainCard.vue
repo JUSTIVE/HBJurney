@@ -7,6 +7,8 @@
     <div class="name">
       최지연
     </div>
+    <div class="underline"/>
+    <div class="whitecutout"/>
     <div class="MainCardBottom">
     </div>
   </div>
@@ -35,6 +37,23 @@ export default {
     top:20%;
     background:white;
     overflow: hidden;
+    .underline{
+      height:10px;
+      width:70px;
+      background:var(--primary);
+      position:absolute;
+      top:120px;
+    }
+    .whitecutout{
+      width:25px;
+      height:25px;
+      position:absolute;
+      border-radius: 50%;
+      background: rgb(255, 238, 0);
+      left:-12.5px;
+      top:304px;
+      z-index: 1;
+    }
     .age{
       font-family: 'Raleway', sans-serif;
       font-size:160px;

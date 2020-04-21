@@ -19,7 +19,7 @@ export default {
         this.stars = [];
         this.speed = [];
         this.position = [];
-        for(var i=0; i<30; i++){
+        for(var i=0; i<50; i++){
             this.stars.push((Math.random()*1))
             this.speed.push(Math.random()*0.005)
             this.position.push(0)
@@ -56,7 +56,7 @@ export default {
         doRender(){
             this.ctx.clearRect(0,0,this.ctx.canvas.clientWidth*4,this.ctx.canvas.clientHeight*4);
             
-            for(var i=0;i<30;i++){
+            for(var i=0;i<50;i++){
                 this.render(this.ctx,i)
             }
         }

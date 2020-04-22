@@ -35,12 +35,8 @@ export default {
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Raleway:wght@700&display=swap');
 .MainCard{
-    // position: absolute;
-    // width:80vw;
     width:100%;
     height:100%;
-    // height:80vh;
-    border-radius:var(--global-radius);
     box-shadow: 0px 26px 71px 0px rgba(255, 255, 255, 0.2);
     left:10%;
     top:10%;
@@ -53,7 +49,7 @@ export default {
     .underline{
       height:10px;
       width:70px;
-      background:var(--primary);
+      background:#6be0af;
       position:absolute;
       top:120px;
       opacity: 0.4;
@@ -71,7 +67,7 @@ export default {
     .age{
       font-family: 'Raleway', sans-serif;
       font-size:160px;
-      color:var(--primary);
+      color:#6be0af;
       font-weight:bold;
       position: absolute;
       left:-18px;
@@ -121,7 +117,7 @@ export default {
       width:100%;
       position: absolute;
       bottom:0px;
-      background:var(--primary);
+      background:#6be0af;
     }
 }
 </style>

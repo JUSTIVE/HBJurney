@@ -1,5 +1,5 @@
 <template>
-    <canvas ref="canvas" class="Arctail" id="arctail" width="300" height="423">
+    <canvas ref="canvas" class="Arctail" id="arctail" width="375" height="528">
     
     </canvas>
 </template>
@@ -25,7 +25,7 @@ export default {
             
         let colorTable = ["#ffd8d9","#FFe807","#6be0af"]
 
-        for(var i=0; i<50; i++){
+        for(var i=0; i<150; i++){
             this.stars.push((Math.random()*1))
             this.speed.push(Math.random()*0.005)
             this.position.push(0)
@@ -45,7 +45,7 @@ export default {
             canvasContext.lineWidth = this.speed[index]*500;
             canvasContext.strokeStyle = "#efefef"
             canvasContext.lineCap = "round";
-            canvasContext.arc(300,423,
+            canvasContext.arc(375,528,
                 index*8,
                 this.position[index]+(Math.PI*0.5), this.stars[index] + this.position[index]+(Math.PI*0.5));
             canvasContext.stroke();
@@ -53,7 +53,7 @@ export default {
             canvasContext.beginPath();
             canvasContext.strokeStyle = this.colors[index]
             canvasContext.lineCap = "round";
-            canvasContext.arc(300,423,
+            canvasContext.arc(375,528,
                 index*8,
                 this.position[index]+(Math.PI*0.5)+this.stars[index],this.stars[index]+ 0.02 + this.position[index]+(Math.PI*0.5));
             canvasContext.stroke();
@@ -63,7 +63,7 @@ export default {
         doRender(){
             this.ctx.clearRect(0,0,this.ctx.canvas.clientWidth*4,this.ctx.canvas.clientHeight*4);
             
-            for(var i=0;i<50;i++){
+            for(var i=0;i<150;i++){
                 this.render(this.ctx,i)
             }
         }

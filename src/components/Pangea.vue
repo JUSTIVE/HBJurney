@@ -1,6 +1,16 @@
 <template>
   <div class="Pangea">
-      <carousel>
+      <carousel 
+      :navigationEnabled=false
+      :perPage=1
+      :paginationEnabled=false
+      :scrollPerPage=true>
+          <slide>
+              <MainCard/>
+          </slide>
+          <slide>
+              <MainCard/>
+          </slide>
           <slide>
               <MainCard/>
           </slide>
@@ -14,13 +24,11 @@
 
 <script>
 import MainCard from "./MainCard.vue";
-import {Carousel,Slide} from 'vue-carousel';
+
 export default {
     name:"Pangea",
     components:{
         MainCard,
-        Carousel,
-        Slide
     }
 }
 </script>
@@ -34,5 +42,8 @@ export default {
 }
 .VueCarousel-slide{
     height:100vh!important;
+}
+.VueCarousel-wrapper{
+    height:100%;
 }
 </style>

@@ -35,9 +35,11 @@ export default {
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Raleway:wght@700&display=swap');
 .MainCard{
-    position: absolute;
-    width:80vw;
-    height:80vh;
+    // position: absolute;
+    // width:80vw;
+    width:100%;
+    height:100%;
+    // height:80vh;
     border-radius:var(--global-radius);
     box-shadow: 0px 26px 71px 0px rgba(255, 255, 255, 0.2);
     left:10%;
@@ -74,7 +76,7 @@ export default {
       position: absolute;
       left:-18px;
       top:-60px;
-      opacity: 0.4;
+      opacity: 0.1;
     }
     @mixin nametemplate{
       font-family: 'Do Hyeon', sans-serif;
@@ -98,28 +100,25 @@ export default {
     .name{
       @include nametemplate();
       animation-delay: 0s;
-      top:60px;
+      top:80px;
       left:24px;
       
     }
     .name2{
       @include nametemplate();
       animation-delay: 1s;
-      top:110px;
+      top:130px;
       left:24px;
     } 
     .name3{
       @include nametemplate();
       animation-delay: 2s;
-      top:180px;
+      top:190px;
       left:24px;
     }
     .MainCardBottom{
       height:35%;
       width:100%;
-      border-radius:15px;
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
       position: absolute;
       bottom:0px;
       background:var(--primary);

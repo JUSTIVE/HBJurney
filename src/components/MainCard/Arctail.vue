@@ -1,5 +1,5 @@
 <template>
-    <canvas ref="canvas" class="Arctail" id="arctail" width="300" height="317">
+    <canvas ref="canvas" class="Arctail" id="arctail" width="300" height="423">
     
     </canvas>
 </template>
@@ -12,17 +12,24 @@ export default {
             stars:undefined,
             speed:undefined,
             position:undefined,
-            ctx:undefined
+            ctx:undefined,
+            colors:undefined
         }
     },
     created(){
         this.stars = [];
         this.speed = [];
         this.position = [];
+        this.colors = [];
+        
+            
+        let colorTable = ["#ffd8d9","#FFe807","#6be0af"]
+
         for(var i=0; i<50; i++){
             this.stars.push((Math.random()*1))
             this.speed.push(Math.random()*0.005)
             this.position.push(0)
+            this.colors.push(colorTable[Math.floor(Math.random()*3)])
         }
     },
     mounted(){
@@ -38,15 +45,15 @@ export default {
             canvasContext.lineWidth = this.speed[index]*500;
             canvasContext.strokeStyle = "#efefef"
             canvasContext.lineCap = "round";
-            canvasContext.arc(300,317,
+            canvasContext.arc(300,423,
                 index*8,
                 this.position[index]+(Math.PI*0.5), this.stars[index] + this.position[index]+(Math.PI*0.5));
             canvasContext.stroke();
 
             canvasContext.beginPath();
-            canvasContext.strokeStyle = "#6be0af"
+            canvasContext.strokeStyle = this.colors[index]
             canvasContext.lineCap = "round";
-            canvasContext.arc(300,317,
+            canvasContext.arc(300,423,
                 index*8,
                 this.position[index]+(Math.PI*0.5)+this.stars[index],this.stars[index]+ 0.02 + this.position[index]+(Math.PI*0.5));
             canvasContext.stroke();

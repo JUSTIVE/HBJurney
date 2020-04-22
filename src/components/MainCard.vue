@@ -5,7 +5,15 @@
       25
     </div>
     <div class="name">
-      최지연
+      <span class="accenttext">지연</span>
+      아
+    </div>
+    <div class="name2">
+      <span class="accenttext">25</span>
+      번째 생일
+    </div>
+    <div class="name3">
+      축하해!!
     </div>
     <div class="underline"/>
     <div class="whitecutout"/>
@@ -27,22 +35,26 @@ export default {
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Raleway:wght@700&display=swap');
 .MainCard{
-  
     position: absolute;
-    width:80%;
-    height:60%;
+    width:80vw;
+    height:80vh;
     border-radius:var(--global-radius);
-    box-shadow: 0px 26px 71px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 26px 71px 0px rgba(255, 255, 255, 0.2);
     left:10%;
-    top:20%;
+    top:10%;
     background:white;
     overflow: hidden;
+    .accenttext{
+      margin-right:-10px;
+      color:#6be0af;
+    }
     .underline{
       height:10px;
       width:70px;
       background:var(--primary);
       position:absolute;
       top:120px;
+      opacity: 0.4;
     }
     .whitecutout{
       width:25px;
@@ -62,15 +74,45 @@ export default {
       position: absolute;
       left:-18px;
       top:-60px;
+      opacity: 0.4;
     }
-    .name{
+    @mixin nametemplate{
       font-family: 'Do Hyeon', sans-serif;
-      // font-weight:bold;
       font-size:48px;
       position: absolute;
+      color:rgb(100, 92, 105);
+      animation-name:show;
+      animation-timing-function: ease-out;
+      animation-duration:.8s;
+    }
+    @keyframes show{
+      from{
+        opacity:0;
+        margin-top:20px;
+      }
+      to{
+        opacity: 1.0;
+        margin-top:0px;
+      }
+    }
+    .name{
+      @include nametemplate();
+      animation-delay: 0s;
       top:60px;
       left:24px;
-      color:rgb(100, 92, 105);
+      
+    }
+    .name2{
+      @include nametemplate();
+      animation-delay: 1s;
+      top:110px;
+      left:24px;
+    } 
+    .name3{
+      @include nametemplate();
+      animation-delay: 2s;
+      top:180px;
+      left:24px;
     }
     .MainCardBottom{
       height:35%;

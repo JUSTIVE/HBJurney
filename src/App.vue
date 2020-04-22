@@ -16,7 +16,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import './theme.scss';
 body{
   width:100vw;
   height:100vh;

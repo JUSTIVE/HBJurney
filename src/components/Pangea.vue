@@ -3,8 +3,7 @@
       <carousel 
       :navigationEnabled=false
       :perPage=1
-      :paginationEnabled=false
-      :scrollPerPage=true>
+      :paginationEnabled=false>
           <slide>
               <MainCard/>
           </slide>
